@@ -1,7 +1,7 @@
 ### Model Overview: EEG-Based Epileptic Seizure Prediction
 
 ### Model Type:
-- **Voting Classifier** with a hard voting mechanism.
+- **Voting Classifier** with a soft voting mechanism.
 - Combines predictions from five different classifiers:
   - XGBoost
   - K-Nearest Neighbors (KNN)
@@ -34,8 +34,8 @@
 
 ### Prediction Process:
 - Each of the five classifiers makes independent predictions on the PCA-transformed test data.
-- The **Voting Classifier** aggregates these predictions using **hard voting**.
-  - **Example:** If 3 out of 5 classifiers predict a sample as class 0 (non-epileptic), the final prediction will be class 0.
+- The **Voting Classifier** aggregates these predictions using **soft voting**.
+  - **Example:** If Model_1 predicts class 0 (probality=0.6), Mode_2 predicts class 1 (probality=0.7), and Model_3 predicts class                   0 (probality=0.8), then the final prediction is class 0 based on averaged probabilities.
 
 ---
 
