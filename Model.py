@@ -26,7 +26,7 @@ import os
 ############################
 # Loading the dataset
 ############################
-data = pd.read_csv("/home/pakhi/PAKHI/Project/data/data.csv")
+data = pd.read_csv("/home/pakhi/PAKHI/Project/data/Signal_Data.csv")
 
 print("Dataset Information:")
 print(data.info())  
