@@ -60,7 +60,7 @@ This project integrates EEG signal processing, machine learning-based prediction
 
 ---
 
-## Conatainerization
+## Containerization
 
 ### **Docker Integration**  
 - Environment is containerized with Docker for reproducibility and consistency.  
