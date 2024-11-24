@@ -8,7 +8,7 @@ process run_model {
 
     script:
     """
-    python3 /home/pakhi/PAKHI/Project/nextflow_pro/Model.py ${signal_data_file}
+    python3 /home/pakhi/PAKHI/Project/nextflow_pro/src.py ${signal_data_file}
     """
 }
 
