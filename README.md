@@ -13,20 +13,18 @@
 
 ### Input Data:
 - **Source:** EEG signal data.
-- **Feature Extraction:** 
-  - Discrete Wavelet Transform (DWT) is applied to extract relevant features from the EEG signals.
-- **Dimensionality Reduction:**
-  - Principal Component Analysis (PCA) is used to reduce dimensionality, retaining components that explain 95% of the variance.
-
+- **UCI-Machine learning learning:** Begleiter, H. (1995). EEG Database [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5TS3D
+-**EEG Dataset:** https://www.kaggle.com/datasets/harunshimanto/epileptic-seizure-recognition
+  
 ---
 
 ### Preprocessing Steps:
 1. **Class Imbalance Handling:**
-   - **SMOTE** (Synthetic Minority Over-sampling Technique) is used to balance the dataset.
+   - **SMOTE** (Synthetic Minority Over-sampling Technique) is used to balance the dataset by creating synthetic features based on statistical measures(such as mean, median, etc).
 2. **Feature Scaling:**
-   - **StandardScaler** is applied to standardize the features.
+   - **StandardScaler** is applied to standardize the features to scale data to have mean=0 and standard deviation=1.
 3. **Wavelet Transform:**
-   - **Discrete Wavelet Transform (DWT)** is used for extracting features from EEG signals.
+   - **Discrete Wavelet Transform (DWT)** is used to perform signal processing for extracting features from EEG signals.
 4. **Dimensionality Reduction:**
    - **PCA** reduces the feature dimensions while maintaining 95% of the data variance.
 
@@ -35,14 +33,14 @@
 ### Prediction Process:
 - Each of the five classifiers makes independent predictions on the PCA-transformed test data.
 - The **Voting Classifier** aggregates these predictions using **soft voting**.
-  - **Example:** If Model_1 predicts class 0 (probality=0.6), Mode_2 predicts class 1 (probality=0.7), and Model_3 predicts class                   0 (probality=0.8), then the final prediction is class 0 based on averaged probabilities.
+  - **Example:** If Model_1 predicts class 0 (probality=0.6), Mode_2 predicts class 1 (probality=0.7), and Model_3 predicts class                   0 (probality=0.8), then the final prediction is class 0 based on averaged probabilities .
 
 ---
 
 ### Target Variable:
 - The model predicts **binary class labels**:
-  - **1:** Epileptic
-  - **0:** Non-epileptic (all other non-epileptic conditions are combined into class 0).
+  - **1:** Epileptic (y-label 1)
+  - **0:** Non-epileptic (all other non-epileptic conditions (y-label: 2,3,4,5) are combined into class 0).
 
 ---
 
