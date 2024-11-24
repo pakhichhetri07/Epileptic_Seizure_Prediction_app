@@ -79,7 +79,10 @@ This project integrates EEG signal processing, machine learning-based prediction
    
 3. **Web address to find the API:** http://localhost:8080
 
-## Deployment  
+## Deployment with AWS
+- Create the role
+- create the instance
+- create pipeline and connect
 
 
 
