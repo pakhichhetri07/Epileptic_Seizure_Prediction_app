@@ -72,11 +72,12 @@ This project integrates EEG signal processing, machine learning-based prediction
 ### **Execution**  
 1. **Build Docker Image:**  
    ```bash
-   docker build -t nextflow-workflow .       #'nextflow-workflow' is my docker-image
+   sudo docker build -t nextflow-workflow .       #'nextflow-workflow' is my docker-image
 2. **Run container:**
    ```bash
    sudo docker run -it -p 8080:8080 nextflow-workflow
    
+3. **Web address to find the API:** http://localhost:8080
 
 ## Deployment  
 
