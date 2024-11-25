@@ -53,11 +53,11 @@ This project integrates EEG signal processing, machine learning-based prediction
 
 ### **Nextflow Workflow**  
 - Automates the **model training** (`src.py`) and **Streamlit app** (`app.py`) integration.  
-- Ensures reproducibility by orchestrating backend and frontend seamlessly.  
+- Ensures reproducibility by integrating backend and frontend seamlessly.  
 
 ### **Streamlit App**  
 - Provides a user-friendly interface for prediction using the trained model.  
-
+The app can be accessible via: https://my-python-app-5oiwmq3ipalkmzagedwmyy.streamlit.app/
 ---
 
 ## Containerization
@@ -77,14 +77,8 @@ This project integrates EEG signal processing, machine learning-based prediction
    ```bash
    sudo docker run -it -p 8080:8080 nextflow-workflow
    
-3. **Web address to find the API:** http://localhost:8080
-
-## Deployment with AWS
-- Create the role
-- create the instance
-- create pipeline and connect
-
-
+3. **Web address to find the API:** 
+https://my-python-app-5oiwmq3ipalkmzagedwmyy.streamlit.app/
 
    ## Summary
-   This project delivers an automated, scalable solution for epileptic seizure prediction, leveraging EEG signal processing, machine learning, and reproducible workflow management.
+   This project offers a scalable and interactive solution for predicting epileptic seizures using EEG signals. By combining EEG signal processing and machine learning, the solution is deployed via a Streamlit app for easy access and use. The trained model is available for real-time predictions and can be deployed using Streamlit Cloud for global access.
